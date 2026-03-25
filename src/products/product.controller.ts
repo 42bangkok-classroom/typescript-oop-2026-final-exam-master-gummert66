@@ -8,5 +8,7 @@ export class ProductController {
     constructor(private readonly productService: ProductService) {}
 
     @Get()
-    getProducts(@)
+    getProducts(@Query('sort') sortParam: string){
+        const result = this.productService.findAll();
+    }
 }
